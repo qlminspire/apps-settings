@@ -1,0 +1,268 @@
+[
+	// Основное //
+
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.showCommands"
+	}, // открыть меню комманд
+	{
+		"key": "ctrl+o",
+		"command": "workbench.action.quickOpen"
+	}, // открыть меню поиска файлов
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.files.openFile",
+		"when": "true"
+	}, // открыть файл
+	{
+		"key": "ctrl+alt+o",
+		"command": "workbench.action.files.openFolder",
+		"when": "true"
+	}, // открыть папку
+
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeEditorsInGroup"
+	}, // закрыть все файлы
+
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.action.pinEditor",
+		"when": "!activeEditorIsPinned"
+	}, // Закрепить текущий файл
+	{
+		"key": "ctrl+shift+p",
+		"command": "workbench.action.unpinEditor",
+		"when": "activeEditorIsPinned"
+	}, // Открепить текущий файл
+
+	{
+		"key": "ctrl+4",
+		"command": "notebook.formatCell",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+	}, // исправить форматирование в файле
+	{
+		"key": "ctrl+4",
+		"command": "editor.action.formatDocument",
+		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+	}, // исправить форматирование в файле
+	{
+		"key": "ctrl+4",
+		"command": "editor.action.formatDocument.none",
+		"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+	}, // исправить форматирование в файле
+	{
+		"key": "ctrl+4",
+		"command": "notebook.format",
+		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+	}, // исправить форматирование в файле
+	{
+		"key": "ctrl+shift+e",
+		"command": "editor.action.marker.nextInFiles",
+		"when": "editorFocus"
+	}, // перейти к следующей ошибке
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.addSelectionToNextFindMatch",
+		"when": "editorFocus"
+	}, // выделить следующее совпадение слова
+
+	// Работа со строками //
+
+	{
+		"key": "ctrl+l",
+		"command": "editor.action.deleteLines",
+		"when": "textInputFocus && !editorReadonly"
+	}, // удалить строку
+	{
+		"key": "ctrl+d",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus"
+	}, // дублировать строку
+	{
+		"key": "ctrl+j",
+		"command": "editor.action.joinLines",
+		"when": "editorTextFocus"
+	}, // объединить строку
+
+	// Работа с зонами //
+
+	{
+		"key": "alt+h",
+		"command": "workbench.action.splitEditorRight",
+		"when": "editorFocus"
+	}, // добавить горизонтальную зону
+	{
+		"key": "alt+v",
+		"command": "workbench.action.splitEditorDown",
+		"when": "editorFocus"
+	},  // добавить вертикальную зону
+	{
+		"key": "alt+w",
+		"command": "workbench.action.joinAllGroups",
+		"when": "editorFocus"
+	}, // объединить все зоны
+
+	{
+		"key": "shift+alt+up",
+		"command": "workbench.action.focusAboveGroup",
+		"when": "editorFocus"
+	},  // переместить фокус в верхнюю зону
+	{
+		"key": "shift+alt+down",
+		"command": "workbench.action.focusBelowGroup",
+		"when": "editorFocus"
+	}, // переместить фокус в нижнюю зону
+	{
+		"key": "shift+alt+left",
+		"command": "workbench.action.focusLeftGroup",
+		"when": "editorFocus"
+	}, // переместить фокус в левую зону
+	{
+		"key": "shift+alt+right",
+		"command": "workbench.action.focusRightGroup",
+		"when": "editorFocus"
+	}, // переместить фокус в правую зону
+
+	{
+		"key": "shift+alt+=",
+		"command": "workbench.action.increaseViewSize",
+		"when": "editorFocus"
+	}, // увеличить размер зоны
+	{
+		"key": "shift+alt+-",
+		"command": "workbench.action.decreaseViewSize",
+		"when": "editorFocus"
+	}, // уменьшить размер зоны
+	{
+		"key": "shift+alt+m",
+		"command": "workbench.action.toggleMaximizeEditorGroup",
+		"when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
+	}, // Максимально увеличить размер зоны
+
+	{
+		"key": "shift+alt+1",
+		"command": "workbench.action.focusFirstEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 1
+	{
+		"key": "shift+alt+2",
+		"command": "workbench.action.focusSecondEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 2
+	{
+		"key": "shift+alt+3",
+		"command": "workbench.action.focusThirdEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 3
+	{
+		"key": "shift+alt+4",
+		"command": "workbench.action.focusFourthEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 4
+	{
+		"key": "shift+alt+5",
+		"command": "workbench.action.focusFifthEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 5
+	{
+		"key": "shift+alt+6",
+		"command": "workbench.action.focusSixthEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 6
+	{
+		"key": "shift+alt+7",
+		"command": "workbench.action.focusSeventhEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 7
+	{
+		"key": "shift+alt+8",
+		"command": "workbench.action.focusEighthEditorGroup",
+		"when": "editorFocus"
+	}, // фокус в зону 8
+
+	// Панели //
+
+	{
+		"key": "ctrl+\\",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	}, // открыть/закрыть левый сайдбар
+	{
+		"key": "ctrl+shift+\\",
+		"command": "workbench.action.toggleSidebarVisibility"
+	}, // открыть/закрыть правый сайдбар
+
+	{
+		"key": "alt+f",
+		"command": "workbench.view.explorer"
+	}, // открыть проводник файлов
+	{
+		"key": "alt+e",
+		"command": "workbench.action.focusActiveEditorGroup"
+	}, // открыть рабочую область
+	{
+		"key": "alt+g",
+		"command": "workbench.view.scm"
+	}, // открыть коммиты
+	{
+		"key": "alt+t",
+		"command": "workbench.action.terminal.toggleTerminal"
+	}, // открыть/закрыть терминал
+
+	// Терминал //
+	{
+		"key": "alt+h",
+		"command": "workbench.action.terminal.split",
+		"when": "terminalFocus"
+	}, // создать терминал справа
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.terminal.kill",
+		"when": "terminalFocus"
+	}, // закрыть активный терминал
+
+	{
+		"key": "alt+1",
+		"command": "workbench.action.terminal.focusAtIndex1",
+		"when": "terminalFocus"
+	}, // фокус в 1-ый терминал
+	{
+		"key": "alt+2",
+		"command": "workbench.action.terminal.focusAtIndex2",
+		"when": "terminalFocus"
+	}, // фокус во 2-ый терминал
+	{
+		"key": "alt+3",
+		"command": "workbench.action.terminal.focusAtIndex3",
+		"when": "terminalFocus"
+	}, // фокус в 3-ый терминал
+
+	// Расширения - Emmet //
+
+	{
+		"key": "ctrl+m ctrl+i",
+		"command": "editor.emmet.action.balanceIn",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+m ctrl+o",
+		"command": "editor.emmet.action.balanceOut",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+m ctrl+w",
+		"command": "editor.emmet.action.wrapWithAbbreviation",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+m ctrl+m",
+		"command": "editor.emmet.action.matchTag",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+m ctrl+backspace",
+		"command": "editor.emmet.action.removeTag",
+		"when": "editorTextFocus"
+	},
+	// Без группировки //
+]

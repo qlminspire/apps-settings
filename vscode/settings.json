@@ -11,16 +11,15 @@
 	// Visual Settings
 
 	"editor.fontSize": 16,
-	"editor.fontFamily": "MonoLisa, Fira Code,  Operator Mono,  Consolas, 'Courier New', monospace",
+	"editor.fontFamily": "Fira Code, MonoLisa, Operator Mono,  Consolas, 'Courier New', monospace",
 	"editor.lineHeight": 0,
 	"editor.fontLigatures": true,
 	"editor.fontWeight": "500",
 	"editor.suggestSelection": "first",
-	"workbench.iconTheme": "material-icon-theme",
 	"workbench.productIconTheme": "fluent-icons",
-	"workbench.colorTheme": "Ayu Mirage Bordered",
+	"workbench.colorTheme": "JetBrains Rider New UI Dark",
 	"workbench.sideBar.location": "right",
-	"glassit.alpha": 250,
+	"glassit.alpha": 255,
 	"explorer.confirmDragAndDrop": false,
 	"window.zoomLevel": 0.5,
 
