@@ -1,0 +1,56 @@
+{
+	//  Better Defaults
+
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.snippetSuggestions": "top",
+	"window.newWindowDimensions": "inherit",
+	"window.menuBarVisibility": "compact",
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": true,
+
+	// Visual Settings
+
+	"editor.fontSize": 16,
+	"editor.fontFamily": "MonoLisa, Fira Code,  Operator Mono,  Consolas, 'Courier New', monospace",
+	"editor.lineHeight": 0,
+	"editor.fontLigatures": true,
+	"editor.fontWeight": "500",
+	"editor.suggestSelection": "first",
+	"workbench.iconTheme": "material-icon-theme",
+	"workbench.productIconTheme": "fluent-icons",
+	"workbench.colorTheme": "Ayu Mirage Bordered",
+	"workbench.sideBar.location": "right",
+	"glassit.alpha": 250,
+	"explorer.confirmDragAndDrop": false,
+	"window.zoomLevel": 0.5,
+
+	//Language Specific Settings
+
+	"emmet.triggerExpansionOnTab": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"terminal.integrated.defaultProfile.windows": "Git Bash",
+
+	// Prettier
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	// Ungroupped
+}
