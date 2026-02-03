@@ -1,268 +1,157 @@
 [
-	// Основное //
+	// --- Основное ---
+	{ "key": "ctrl+p", "command": "workbench.action.showCommands" }, // Открыть меню команд
+	{ "key": "ctrl+o", "command": "workbench.action.quickOpen" }, // Открыть файл по названию
 
-	{
-		"key": "ctrl+p",
-		"command": "workbench.action.showCommands"
-	}, // открыть меню комманд
-	{
-		"key": "ctrl+o",
-		"command": "workbench.action.quickOpen"
-	}, // открыть меню поиска файлов
-	{
-		"key": "ctrl+shift+o",
-		"command": "workbench.action.files.openFile",
-		"when": "true"
-	}, // открыть файл
-	{
-		"key": "ctrl+alt+o",
-		"command": "workbench.action.files.openFolder",
-		"when": "true"
-	}, // открыть папку
+	{ "key": "ctrl+shift+o", "command": "workbench.action.files.openFile", "when": "true" }, // Открыть файл
+	{ "key": "ctrl+alt+o", "command": "workbench.action.files.openFolder", "when": "true" }, // Открыть папку
 
-	{
-		"key": "ctrl+shift+w",
-		"command": "workbench.action.closeEditorsInGroup"
-	}, // закрыть все файлы
+	{ "key": "ctrl+s", "command": "workbench.action.files.save" }, // Сохранить файл
+	{ "key": "ctrl+shift+s", "command": "workbench.action.files.saveAs" }, // Сохранить файл как...
+	{ "key": "ctrl+alt+s", "command": "workbench.action.files.saveAll" }, // Сохранить все файлы
 
-	{
-		"key": "ctrl+shift+p",
-		"command": "workbench.action.pinEditor",
-		"when": "!activeEditorIsPinned"
-	}, // Закрепить текущий файл
-	{
-		"key": "ctrl+shift+p",
-		"command": "workbench.action.unpinEditor",
-		"when": "activeEditorIsPinned"
-	}, // Открепить текущий файл
+	{ "key": "ctrl+f", "command": "actions.find" }, // Искать в текущем файле
+	{ "key": "ctrl+shift+f", "command": "workbench.action.findInFiles" }, // Искать по всем файлам
 
-	{
-		"key": "ctrl+4",
-		"command": "notebook.formatCell",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
-	}, // исправить форматирование в файле
-	{
-		"key": "ctrl+4",
-		"command": "editor.action.formatDocument",
-		"when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
-	}, // исправить форматирование в файле
-	{
-		"key": "ctrl+4",
-		"command": "editor.action.formatDocument.none",
-		"when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
-	}, // исправить форматирование в файле
-	{
-		"key": "ctrl+4",
-		"command": "notebook.format",
-		"when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
-	}, // исправить форматирование в файле
-	{
-		"key": "ctrl+shift+e",
-		"command": "editor.action.marker.nextInFiles",
-		"when": "editorFocus"
-	}, // перейти к следующей ошибке
-	{
-		"key": "ctrl+shift+d",
-		"command": "editor.action.addSelectionToNextFindMatch",
-		"when": "editorFocus"
-	}, // выделить следующее совпадение слова
+	{ "key": "ctrl+r", "command": "editor.action.startFindReplace" }, // Заменить в текущем файле
+	{ "key": "ctrl+shift+r", "command": "workbench.action.replaceInFiles" }, // Заменить во всех файлах
 
-	// Работа со строками //
+	{ "key": "ctrl+w", "command": "workbench.action.closeActiveEditor" }, // Закрыть текущий таб
+	{ "key": "ctrl+shift+w", "command": "workbench.action.closeEditorsInGroup" }, // Закрыть все табы в текущей группе
+	{ "key": "ctrl+alt+shift+w", "command": "workbench.action.closeAllEditors" }, // Закрыть все табы кроме закрепленных
 
-	{
-		"key": "ctrl+l",
-		"command": "editor.action.deleteLines",
-		"when": "textInputFocus && !editorReadonly"
-	}, // удалить строку
-	{
-		"key": "ctrl+d",
-		"command": "editor.action.copyLinesDownAction",
-		"when": "editorTextFocus"
-	}, // дублировать строку
-	{
-		"key": "ctrl+j",
-		"command": "editor.action.joinLines",
-		"when": "editorTextFocus"
-	}, // объединить строку
+	{ "key": "ctrl+shift+p", "command": "workbench.action.pinEditor", "when": "!activeEditorIsPinned" }, // Закрепить файл
+	{ "key": "ctrl+shift+p", "command": "workbench.action.unpinEditor", "when": "activeEditorIsPinned" }, // Открепить файл
 
-	// Работа с зонами //
+	{ "key": "ctrl+1", "command": "editor.action.revealDefinition", "when": "editorHasDefinitionProvider && editorTextFocus" }, // Перейти к определению
+	{ "key": "ctrl+2", "command": "editor.action.goToImplementation", "when": "editorHasImplementationProvider && editorTextFocus" }, // Перейти к реализации
+	{ "key": "ctrl+3", "command": "editor.action.refactor", "when": "editorTextFocus" }, // Открыть меню рефакторинга
+	{ "key": "ctrl+4", "command": "notebook.formatCell", "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'" }, // Форматирование документа
+	{ "key": "ctrl+4", "command": "editor.action.formatDocument", "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor" }, // Отформатировать документ
+	{ "key": "ctrl+4", "command": "editor.action.formatDocument.none", "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly" }, // Отформатировать документ
+	{ "key": "ctrl+4", "command": "notebook.format", "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'" }, // Отформатировать документ
+	{ "key": "ctrl+alt+shift+f", "command": "editor.action.formatDocument", "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly" }, // Отформатировать документ
 
-	{
-		"key": "alt+h",
-		"command": "workbench.action.splitEditorRight",
-		"when": "editorFocus"
-	}, // добавить горизонтальную зону
-	{
-		"key": "alt+v",
-		"command": "workbench.action.splitEditorDown",
-		"when": "editorFocus"
-	},  // добавить вертикальную зону
-	{
-		"key": "alt+w",
-		"command": "workbench.action.joinAllGroups",
-		"when": "editorFocus"
-	}, // объединить все зоны
+	{ "key": "ctrl+shift+d", "command": "editor.action.addSelectionToNextFindMatch", "when": "editorFocus" }, // Выделить следующее совпадение
+	{ "key": "ctrl+shift+q", "command": "references-view.findImplementations" }, // Перейти к объявлению (реализации)
+	{ "key": "alt+enter", "command": "editor.action.quickFix", "when": "editorTextFocus" }, // Открыть меню всплывающих подсказок (Quick Fix)
 
-	{
-		"key": "shift+alt+up",
-		"command": "workbench.action.focusAboveGroup",
-		"when": "editorFocus"
-	},  // переместить фокус в верхнюю зону
-	{
-		"key": "shift+alt+down",
-		"command": "workbench.action.focusBelowGroup",
-		"when": "editorFocus"
-	}, // переместить фокус в нижнюю зону
-	{
-		"key": "shift+alt+left",
-		"command": "workbench.action.focusLeftGroup",
-		"when": "editorFocus"
-	}, // переместить фокус в левую зону
-	{
-		"key": "shift+alt+right",
-		"command": "workbench.action.focusRightGroup",
-		"when": "editorFocus"
-	}, // переместить фокус в правую зону
+	// --- Работа со строками ---
+	{ "key": "alt+up", "command": "editor.action.moveLinesUpAction", "when": "editorTextFocus && !editorReadonly" }, // Поменять местами выбранную строку с верхней
+	{ "key": "alt+down", "command": "editor.action.moveLinesDownAction", "when": "editorTextFocus && !editorReadonly" }, // Поменять местами выбранную строку с нижней
 
-	{
-		"key": "shift+alt+=",
-		"command": "workbench.action.increaseViewSize",
-		"when": "editorFocus"
-	}, // увеличить размер зоны
-	{
-		"key": "shift+alt+-",
-		"command": "workbench.action.decreaseViewSize",
-		"when": "editorFocus"
-	}, // уменьшить размер зоны
-	{
-		"key": "shift+alt+m",
-		"command": "workbench.action.toggleMaximizeEditorGroup",
-		"when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups"
-	}, // Максимально увеличить размер зоны
+	{ "key": "ctrl+shift+left", "command": "cursorWordLeftSelect", "when": "textInputFocus" }, // Выделить слово слева
+	{ "key": "ctrl+shift+right", "command": "cursorWordRightSelect", "when": "textInputFocus" }, // Выделить слово справа
 
-	{
-		"key": "shift+alt+1",
-		"command": "workbench.action.focusFirstEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 1
-	{
-		"key": "shift+alt+2",
-		"command": "workbench.action.focusSecondEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 2
-	{
-		"key": "shift+alt+3",
-		"command": "workbench.action.focusThirdEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 3
-	{
-		"key": "shift+alt+4",
-		"command": "workbench.action.focusFourthEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 4
-	{
-		"key": "shift+alt+5",
-		"command": "workbench.action.focusFifthEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 5
-	{
-		"key": "shift+alt+6",
-		"command": "workbench.action.focusSixthEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 6
-	{
-		"key": "shift+alt+7",
-		"command": "workbench.action.focusSeventhEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 7
-	{
-		"key": "shift+alt+8",
-		"command": "workbench.action.focusEighthEditorGroup",
-		"when": "editorFocus"
-	}, // фокус в зону 8
+	{ "key": "ctrl+l", "command": "editor.action.deleteLines", "when": "textInputFocus && !editorReadonly" }, // Удалить строку
+	{ "key": "ctrl+d", "command": "editor.action.copyLinesDownAction", "when": "editorTextFocus" }, // Дублировать строку
+	{ "key": "ctrl+j", "command": "editor.action.joinLines", "when": "editorTextFocus" }, // Объединить две строки в одну
 
-	// Панели //
+	{ "key": "ctrl+enter", "command": "editor.action.insertLineBefore", "when": "editorTextFocus && !editorReadonly" }, // Добавить пустую строку сверху
 
-	{
-		"key": "ctrl+\\",
-		"command": "workbench.action.toggleAuxiliaryBar"
-	}, // открыть/закрыть левый сайдбар
-	{
-		"key": "ctrl+shift+\\",
-		"command": "workbench.action.toggleSidebarVisibility"
-	}, // открыть/закрыть правый сайдбар
+	// --- Работа с несколькими курсорами ---
+	{ "key": "ctrl+alt+up", "command": "editor.action.insertCursorAbove" }, // Активировать дополнительный курсор на строке выше
+	{ "key": "ctrl+alt+down", "command": "editor.action.insertCursorBelow" }, // Активировать дополнительный курсор на строке ниже
+	{ "key": "alt+click", "command": "editor.action.addCursorAtPosition" }, // Активировать дополнительный курсор на месте нажатия мышью
 
-	{
-		"key": "alt+f",
-		"command": "workbench.view.explorer"
-	}, // открыть проводник файлов
-	{
-		"key": "alt+e",
-		"command": "workbench.action.focusActiveEditorGroup"
-	}, // открыть рабочую область
-	{
-		"key": "alt+g",
-		"command": "workbench.view.scm"
-	}, // открыть коммиты
-	{
-		"key": "alt+t",
-		"command": "workbench.action.terminal.toggleTerminal"
-	}, // открыть/закрыть терминал
+	// --- Панели ---
+	{ "key": "ctrl+\\", "command": "workbench.action.toggleSidebarVisibility" }, // Открыть/закрыть левую боковую панель
+	{ "key": "ctrl+shift+\\", "command": "workbench.action.toggleAuxiliaryBar" }, // Открыть/закрыть правую боковую панель
+	{ "key": "alt+c", "command": "workbench.view.scm" }, // Открыть коммиты
+	{ "key": "alt+x", "command": "workbench.view.testing.focus" }, // Открыть тесты
+	{ "key": "alt+b", "command": "workbench.action.tasks.build" }, // Открыть Build
+	{ "key": "alt+d", "command": "workbench.view.debug" }, // Oткрыть Debug
+	{ "key": "alt+p", "command": "workbench.action.openRecent" }, // Открыть недавние проекты
+	{ "key": "alt+f", "command": "workbench.view.explorer" }, // Открыть проводник с файлами
+	{ "key": "alt+e", "command": "workbench.action.focusActiveEditorGroup" }, // Фокус в зону редактора
+	{ "key": "alt+g", "command": "gitlens.showBranchesView" }, // Открыть Git
+	{ "key": "alt+t", "command": "workbench.action.terminal.toggleTerminal" }, // Открыть терминал
 
-	// Терминал //
-	{
-		"key": "alt+h",
-		"command": "workbench.action.terminal.split",
-		"when": "terminalFocus"
-	}, // создать терминал справа
-	{
-		"key": "ctrl+w",
-		"command": "workbench.action.terminal.kill",
-		"when": "terminalFocus"
-	}, // закрыть активный терминал
+	{ "key": "ctrl,", "command": "workbench.action.openSettings" }, // Настройки
 
-	{
-		"key": "alt+1",
-		"command": "workbench.action.terminal.focusAtIndex1",
-		"when": "terminalFocus"
-	}, // фокус в 1-ый терминал
-	{
-		"key": "alt+2",
-		"command": "workbench.action.terminal.focusAtIndex2",
-		"when": "terminalFocus"
-	}, // фокус во 2-ый терминал
-	{
-		"key": "alt+3",
-		"command": "workbench.action.terminal.focusAtIndex3",
-		"when": "terminalFocus"
-	}, // фокус в 3-ый терминал
+	// --- Работа с табами ---
+	{ "key": "alt+1", "command": "workbench.action.openEditorAtIndex1" }, // Переключиться на табу 1
+	{ "key": "alt+2", "command": "workbench.action.openEditorAtIndex2" },
+	{ "key": "alt+3", "command": "workbench.action.openEditorAtIndex3" },
+	{ "key": "alt+4", "command": "workbench.action.openEditorAtIndex4" },
+	{ "key": "alt+5", "command": "workbench.action.openEditorAtIndex5" },
+	{ "key": "alt+6", "command": "workbench.action.openEditorAtIndex6" },
+	{ "key": "alt+7", "command": "workbench.action.openEditorAtIndex7" },
+	{ "key": "alt+8", "command": "workbench.action.openEditorAtIndex8" }, // Переключиться на табу 8
+	{ "key": "alt+left", "command": "workbench.action.previousEditor" }, // Переключиться на предыдущий табу
+	{ "key": "alt+right", "command": "workbench.action.nextEditor" }, // Переключиться на следующий табу
 
-	// Расширения - Emmet //
+	// --- Работа с зонами ---
+	/// --- Создание новых зон ---
+	{ "key": "alt+h", "command": "workbench.action.splitEditorRight", "when": "editorFocus" }, // Создать новую зону справа (вертикальное разделение)
+	{ "key": "alt+v", "command": "workbench.action.splitEditorDown", "when": "editorFocus" }, // Создать новую зону снизу (горизонтальное разделение)
+	/// --- Изменение размеров зон ---
+	{ "key": "shift+alt+=", "command": "workbench.action.increaseViewSize", "when": "editorFocus" }, // Увеличить размер зоны в фокусе
+	{ "key": "shift+alt+-", "command": "workbench.action.decreaseViewSize", "when": "editorFocus" }, // Уменьшить размер зоны в фокусе
+	{ "key": "shift+alt+m", "command": "workbench.action.toggleMaximizeEditorGroup", "when": "editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups" }, // Увеличить размер зоны в фокусе на максимум
+	/// --- Смещение фокуса в зону ---
+	{ "key": "shift+alt+up", "command": "workbench.action.focusAboveGroup", "when": "editorFocus" }, // Фокус в зону сверху
+	{ "key": "shift+alt+down", "command": "workbench.action.focusBelowGroup", "when": "editorFocus" }, // Фокус в зону снизу
+	{ "key": "shift+alt+left", "command": "workbench.action.focusLeftGroup", "when": "editorFocus" }, // Фокус в зону слева
+	{ "key": "shift+alt+right", "command": "workbench.action.focusRightGroup", "when": "editorFocus" }, // Фокус в зону справа
+	{ "key": "shift+alt+1", "command": "workbench.action.focusFirstEditorGroup", "when": "editorFocus" }, // Фокус в зону 1
+	{ "key": "shift+alt+2", "command": "workbench.action.focusSecondEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+3", "command": "workbench.action.focusThirdEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+4", "command": "workbench.action.focusFourthEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+5", "command": "workbench.action.focusFifthEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+6", "command": "workbench.action.focusSixthEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+7", "command": "workbench.action.focusSeventhEditorGroup", "when": "editorFocus" },
+	{ "key": "shift+alt+8", "command": "workbench.action.focusEighthEditorGroup", "when": "editorFocus" }, // Фокус в зону 8
 
-	{
-		"key": "ctrl+m ctrl+i",
-		"command": "editor.emmet.action.balanceIn",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+m ctrl+o",
-		"command": "editor.emmet.action.balanceOut",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+m ctrl+w",
-		"command": "editor.emmet.action.wrapWithAbbreviation",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+m ctrl+m",
-		"command": "editor.emmet.action.matchTag",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+m ctrl+backspace",
-		"command": "editor.emmet.action.removeTag",
-		"when": "editorTextFocus"
-	},
-	// Без группировки //
+	// --- Режимы отображения ---
+	{ "key": "alt+shift+enter", "command": "workbench.action.toggleFullScreen" }, // Включить/отключить полноэкранный режим
+	{ "key": "ctrl+alt+shift+enter", "command": "workbench.action.toggleZenMode" }, // Включить/отключить Zen режим
+
+	// --- Терминал ---
+	{ "key": "alt+h", "command": "workbench.action.terminal.split", "when": "terminalFocus" }, // Открыть новый терминал справа
+	{ "key": "ctrl+w", "command": "workbench.action.terminal.kill", "when": "terminalFocus" }, // Закрыть текущий терминал
+
+	// --- Закладки ---
+	{ "key": "ctrl+k k", "command": "bookmarks.toggle" }, // Добавить/удалить закладку
+	{ "key": "ctrl+k ctrl+k", "command": "bookmarks.toggle" }, // Добавить/удалить закладку
+	{ "key": "ctrl+k ctrl+m", "command": "bookmarks.toggleLabeled" }, // Добавить закладку с коментарием
+	{ "key": "ctrl+k m", "command": "bookmarks.toggleLabeled" }, // Добавить закладку с коментарием
+	{ "key": "alt+k k", "command": "bookmarks.list" }, // Открыть список закладок
+	{ "key": "alt+k alt+k", "command": "bookmarks.list" }, // Открыть список закладок
+	{ "key": "alt+w", "command": "bookmarksExplorer.focus" }, // Открыть меню закладок
+
+	// --- Тесты ---
+	{ "key": "ctrl+t t", "command": "testing.runAll" }, // Запустить тесты
+	{ "key": "ctrl+t ctrl+t", "command": "testing.runAll" }, // Запустить тесты
+
+	{ "key": "ctrl+t d", "command": "testing.debugAll" }, // Запустить тесты в режиме отладки
+	{ "key": "ctrl+t ctrl+d", "command": "testing.debugAll" }, // Запустить тесты в режиме отладки
+
+	// --- Git ---
+	{ "key": "ctrl+shift+n", "command": "git.branch" }, // Создать git ветку
+	{ "key": "alt+delete", "command": "git.deleteBranch" }, // Удалить git ветку
+	{ "key": "ctrl+alt+a", "command": "git.stageAll" }, // Добавление git изменений в staged
+	{ "key": "ctrl+alt+z", "command": "git.unstageAll" }, // Удаление git изменений из staged
+
+	// --- Отладка ---
+	{ "key": "ctrl+alt+r", "command": "workbench.action.debug.run" }, // Запустить проект
+	{ "key": "ctrl+alt+d d", "command": "workbench.action.debug.start" }, // Запустить проект в режиме отладки
+	{ "key": "ctrl+alt+d ctrl+alt+d", "command": "workbench.action.debug.start" }, // Запустить проект в режиме отладки
+	{ "key": "ctrl+alt+d s", "command": "workbench.action.debug.stop" }, // +
+	{ "key": "ctrl+alt+d ctrl+alt+s", "command": "workbench.action.debug.stop" }, // +
+	{ "key": "ctrl+b b", "command": "editor.debug.action.toggleBreakpoint" }, // Добавить точку останова
+	{ "key": "ctrl+b ctrl+b", "command": "editor.debug.action.toggleBreakpoint" }, // Добавить точку останова
+	{ "key": "f10", "command": "workbench.action.debug.stepOver" },
+	{ "key": "f11", "command": "workbench.action.debug.stepInto" }, // Отладка - войти в метод
+	{ "key": "shift+f11", "command": "workbench.action.debug.stepOut" }, // Отладка - выйти из метода
+
+	{ "key": "ctrl+u", "command": "editor.action.transformToUppercase", "when": "editorTextFocus && !editorReadonly" }, // Перевести текст в верхний регистр
+	{ "key": "ctrl+shift+u", "command": "editor.action.transformToLowercase", "when": "editorTextFocus && !editorReadonly" }, // Перевести текст в нижний регистр
+
+	// --- Emmet ---
+	{ "key": "ctrl+m ctrl+i", "command": "editor.emmet.action.balanceIn", "when": "editorTextFocus" },
+	{ "key": "ctrl+m ctrl+o", "command": "editor.emmet.action.balanceOut", "when": "editorTextFocus" },
+	{ "key": "ctrl+m ctrl+w", "command": "editor.emmet.action.wrapWithAbbreviation", "when": "editorTextFocus" },
+	{ "key": "ctrl+m ctrl+m", "command": "editor.emmet.action.matchTag", "when": "editorTextFocus" },
+	{ "key": "ctrl+m ctrl+backspace", "command": "editor.emmet.action.removeTag", "when": "editorTextFocus" }
 ]

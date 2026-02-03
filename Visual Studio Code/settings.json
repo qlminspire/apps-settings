@@ -1,14 +1,14 @@
 {
-	//  Better Defaults
+	//  Базовые настройки
 
-	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.ignoreTrimWhitespace": true,
 	"editor.snippetSuggestions": "top",
 	"window.newWindowDimensions": "inherit",
-	"window.menuBarVisibility": "compact",
+	"window.menuBarVisibility": "classic",
 	"files.trimTrailingWhitespace": true,
 	"files.trimFinalNewlines": true,
 
-	// Visual Settings
+	// Настройки отображения
 
 	"editor.fontSize": 16,
 	"editor.fontFamily": "Fira Code, MonoLisa, Operator Mono,  Consolas, 'Courier New', monospace",
@@ -17,20 +17,19 @@
 	"editor.fontWeight": "500",
 	"editor.suggestSelection": "first",
 	"workbench.productIconTheme": "fluent-icons",
-	"workbench.colorTheme": "JetBrains Rider New UI Dark",
-	"workbench.sideBar.location": "right",
+	"workbench.sideBar.location": "left",
 	"glassit.alpha": 255,
 	"explorer.confirmDragAndDrop": false,
 	"window.zoomLevel": 0.5,
 
-	//Language Specific Settings
+	// Настройки для языков
 
 	"emmet.triggerExpansionOnTab": true,
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"typescript.updateImportsOnFileMove.enabled": "always",
-	"terminal.integrated.defaultProfile.windows": "Git Bash",
+	"terminal.integrated.defaultProfile.windows": "Windows PowerShell",
 
-	// Prettier
+	// Prettier Plugin - Настройки
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		"editor.formatOnSave": true
@@ -51,5 +50,81 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 
-	// Ungroupped
+	// Bookmark Plugin - Настройки
+	"workbench.colorCustomizations": {
+		"bookmarks.lineBackground": "#a1a8222a",
+		"bookmarks.lineBorder": "#f9dcab",
+		"bookmarks.overviewRuler": "#c4f47688"
+	},
+
+	// Project Manager Plugin - Настройки
+	"projectManager.tags": ["Personal", "Work", "ClientProductTeam"],
+
+	// SQL Server Plugin - Настройки
+	"mssql.connectionGroups": [
+		{
+			"name": "ROOT",
+			"id": "BB9A11C1-1E23-4915-9AA3-F7889B9942F4"
+		}
+	],
+	"mssql.connections": [
+		{
+			"authenticationType": "Integrated",
+			"connectTimeout": 30,
+			"applicationName": "vscode-mssql",
+			"applicationIntent": "ReadWrite",
+			"profileName": "Local",
+			"server": "localhost\\SQLEXPRESS",
+			"trustServerCertificate": true,
+			"groupId": "BB9A11C1-1E23-4915-9AA3-F7889B9942F4",
+			"id": "1DFD04EA-C2F9-43EA-A6A6-203BD10603D5",
+			"database": "",
+			"user": "",
+			"password": "",
+			"commandTimeout": 30,
+			"encrypt": "Mandatory",
+			"profileSource": 0
+		}
+	],
+
+	// Docker - Настройки
+	"containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+	"containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+	"docker.extension.enableComposeLanguageServer": false,
+	"[dockercompose]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": "advanced",
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": false,
+			"strings": true
+		},
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"[github-actions-workflow]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"explorer.confirmDelete": false,
+	"chat.mcp.gallery.enabled": true,
+	"chat.mcp.serverSampling": {
+		"Global in Code: github/github-mcp-server": {
+			"allowedModels": [
+				"copilot/gpt-5-mini",
+				"copilot/auto",
+				"copilot/claude-3.5-sonnet",
+				"copilot/gemini-2.0-flash-001",
+				"copilot/gemini-2.5-pro",
+				"copilot/gpt-4.1",
+				"copilot/gpt-4o",
+				"copilot/o3-mini"
+			]
+		}
+	},
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"prettier.printWidth": 100000,
+	"prettier.tabWidth": 2,
+	"editor.formatOnSave": true
+
+	// Без группировки
 }
